@@ -1,6 +1,10 @@
 $(document).ready(function () {
     console.log("ready!");
 
+    possibleGuessArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    userGuessArray = []; 
+
+
     var randomWords = [
         "dog",
         "cat",
@@ -23,48 +27,38 @@ $(document).ready(function () {
     var str = word; 
     var array = str.split("");
     console.log(array);
+    
+
+   
 
 
     for (var i = 0; i < array.length; i++) {
         jQuery('<div/>', {
-            class: "blank-box",
-            title: 'now this div has a title!'
+            class: "blank-box"
         }).appendTo("#word-guessed");
+
+
 }
     //event listener 
     document.onkeyup = function (event) {
         var userGuess = event.key;
         console.log(userGuess);
-      
+    
+        if (possibleGuessArray.includes(userGuess))
 
-
- {
-          
-
-            // console.log(array.length);
+      {
             if (word.includes(userGuess)) {
                 console.log(userGuess + " is correct");
                 var correctLetter = userGuess; 
-                console.log(correctLetter);
-               
+                console.log(correctLetter);   
             } else {
                 $("#guesses").append(userGuess + "-");
-                console.log("You guessed the wrong letter")}
-               
+                console.log("You guessed the wrong letter")
+            }
 
+        } else {
+            confirm(userGuess + " is not a valid guess, please enter a letter!")
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
