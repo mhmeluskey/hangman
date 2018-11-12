@@ -26,30 +26,34 @@ $(document).ready(function () {
 
 
     for (var i = 0; i < array.length; i++) {
-        $("#word-guessed").append("<div>hello</div>")
-    }
-
+        jQuery('<div/>', {
+            class: "blank-box",
+            title: 'now this div has a title!'
+        }).appendTo("#word-guessed");
+}
     //event listener 
     document.onkeyup = function (event) {
         var userGuess = event.key;
-
-
         console.log(userGuess);
-        $("#guesses").append(userGuess + "-");
+      
 
 
-        for (var i = 0; i < array.length; i++) {
+ {
           
 
             // console.log(array.length);
-            if (userGuess === array[i]) {
+            if (word.includes(userGuess)) {
                 console.log(userGuess + " is correct");
-            } else {
+                var correctLetter = userGuess; 
+                console.log(correctLetter);
                
-                
+            } else {
+                $("#guesses").append(userGuess + "-");
                 console.log("You guessed the wrong letter")}
+               
 
         }
+
 
 
 
