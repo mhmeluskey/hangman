@@ -10,6 +10,8 @@
 
 //function to generate random word 
 
+$( document ).ready(function() {
+    console.log( "ready!" );
 
 function newWord() {
     var randomWords = [
@@ -23,10 +25,42 @@ function newWord() {
     var word = randomWords[Math.floor(Math.random() * randomWords.length)]; {
         console.log(word);
     }
-
    var amount = word.length;
     console.log(amount);
     
+    $("#display-word").on("click", function(event) {
+    $("#word").html("New Word is: " + amount + " letters long.")
+})
+    
+//listener for letter guesses
+document.onkeyup = function (event) {
+    var userGuess = event.key;
+    console.log(userGuess);
+    $("#guesses").append(userGuess + "-");
+
+var str = word; 
+var array = str.split("");
+console.log(array);
+
+    for (var i = 0; i < array.length; i++) {
+   
+        console.log(array.length); 
+     if (userGuess === i){
+         console.log("The letter" + userGuess + "is in the word");
+     } else {
+        console.log("The letter" + userGuess + "is NOT in the word");
+     }
+    
+    }
+
+}//on key up
+
+
+
+   
+
+
+
 
 
 }; //newWord function 
@@ -36,9 +70,9 @@ newWord();
 
 
 
-//listener for letter guesses
-document.onkeyup = function (event) {
-    var userGuess = event.key;
-    console.log(userGuess);
-    $("#guesses").append(userGuess + "-");
-}//on key up
+
+
+
+
+
+});
