@@ -1,23 +1,10 @@
-//1. generate a random word
-//get the number of letters in that word and post that amount of spaces to the doc
+$(document).ready(function () {
+    console.log("ready!");
 
-
-//2. event listener for hitting a specific key
-//print that letter to the doc
-
-//3. if that letter is in the chosen word then put it in the div with where the chosen word will be 
-//if not put it to the letter guesses div
-
-//function to generate random word 
-
-$( document ).ready(function() {
-    console.log( "ready!" );
-
-function newWord() {
     var randomWords = [
         "dog",
         "cat",
-        "trump",
+        "america",
         "bootcamp",
         "javascript",
         "philadelphia"
@@ -25,48 +12,47 @@ function newWord() {
     var word = randomWords[Math.floor(Math.random() * randomWords.length)]; {
         console.log(word);
     }
-   var amount = word.length;
+    var amount = word.length;
     console.log(amount);
-    
-    $("#display-word").on("click", function(event) {
-    $("#word").html("New Word is: " + amount + " letters long.")
-})
-    
-//listener for letter guesses
-document.onkeyup = function (event) {
-    var userGuess = event.key;
-    console.log(userGuess);
-    $("#guesses").append(userGuess + "-");
 
-var str = word; 
-var array = str.split("");
-console.log(array);
+    $("#display-word").on("click", function (event) {
+        $("#word").html("New Word is: " + amount + " letters long.")
+    })
+
+    
+    var str = word; 
+    var array = str.split("");
+    console.log(array);
+
 
     for (var i = 0; i < array.length; i++) {
-   
-        console.log(array.length); 
-     if (userGuess === i){
-         console.log("The letter" + userGuess + "is in the word");
-     } else {
-        console.log("The letter" + userGuess + "is NOT in the word");
-     }
-    
+        $("#word-guessed").append("<div>hello</div>")
     }
 
-}//on key up
+    //event listener 
+    document.onkeyup = function (event) {
+        var userGuess = event.key;
+
+
+        console.log(userGuess);
+        $("#guesses").append(userGuess + "-");
+
+
+        for (var i = 0; i < array.length; i++) {
+          
+
+            // console.log(array.length);
+            if (userGuess === array[i]) {
+                console.log(userGuess + " is correct");
+            } else {
+               
+                
+                console.log("You guessed the wrong letter")}
+
+        }
 
 
 
-   
-
-
-
-
-
-}; //newWord function 
-
-
-newWord();
 
 
 
@@ -75,4 +61,11 @@ newWord();
 
 
 
-});
+
+
+
+    }//on key up
+
+
+
+}); //doc.ready function
