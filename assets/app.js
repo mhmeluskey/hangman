@@ -3,7 +3,8 @@ $(document).ready(function () {
 
     possibleGuessArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     userGuessArray = [];
-    correctGuess = [];
+    correctGuessArray = [];
+
 
 
     var randomWords = [
@@ -32,29 +33,40 @@ $(document).ready(function () {
 
     for (var i = 0; i < lettersOfWordArray.length; i++) {
         jQuery('<div/>', {
-            class: "blank-box"
+            class: "blank-box",
+            value: i,
+            id: lettersOfWordArray[i]
         }).appendTo("#word-guessed");
-
-
     }
+
+    var ids = [];
+    $(".blank-box").each(function () { ids.push(this.id); });
+    console.log("ids: " + ids);
+
+    //if the letter guessed equals the id of the div, append the user guess to that div
+
+
     //event listener 
     document.onkeyup = function (event) {
         var userGuess = event.key;
-        console.log(userGuess);
+        
 
 
-        if (userGuessArray.includes(userGuess) || correctGuess.includes(userGuess)) {
+        if (userGuessArray.includes(userGuess) || correctGuessArray.includes(userGuess)) {
 
             confirm("You have already guessed letter " + userGuess);
 
         } else {
+
             if (possibleGuessArray.includes(userGuess)) {
                 if (word.includes(userGuess)) {
-                    console.log(userGuess + " is correct");
-                    var correctLetter = userGuess;
-                    console.log(correctLetter);
-                    correctGuess.push(userGuess);
 
+                   
+                    console.log(userGuess + " is correct");
+                    correctGuessArray.push(userGuess);
+                    $("#" + userGuess).append(userGuess);
+                    
+                
 
                 } else {
                     $("#guesses").append(userGuess + "-");
@@ -68,7 +80,10 @@ $(document).ready(function () {
                 confirm(userGuess + "is not a valid guess. Please enter a letter!")
             }
 
-        } //end of else for userGuessArray.includes(userGuess)
+
+
+
+        }//end of else for userGuessArray.includes(userGuess)
 
     } //document on key up
 
