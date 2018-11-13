@@ -4,5 +4,29 @@
     height: 20px;
     margin: 5px; 
     float: left;
+}
+
+#post {
+    width: 4px; 
+    height: 400px; 
+    background-color: black;
+    margin: 60px; 
+    margin-bottom: 0px; 
+}
+
+#side {
+    width: 175px; 
+    height: 4px; 
+    background-color: black;
+    margin-left: 60px; 
+    margin-top: 60px; 
+    margin-bottom: -60px; 
+}
+
+#floor {
+    width: 175px; 
+    height: 4px; 
+    background-color: black;
 
 }
+
