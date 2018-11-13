@@ -3,6 +3,7 @@ $(document).ready(function () {
 
     possibleGuessArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     userGuessArray = [];
+    correctGuess = [];
 
 
     var randomWords = [
@@ -25,14 +26,11 @@ $(document).ready(function () {
 
 
     var str = word;
-    var array = str.split("");
-    console.log(array);
+    var lettersOfWordArray = str.split("");
+    console.log(lettersOfWordArray);
 
 
-
-
-
-    for (var i = 0; i < array.length; i++) {
+    for (var i = 0; i < lettersOfWordArray.length; i++) {
         jQuery('<div/>', {
             class: "blank-box"
         }).appendTo("#word-guessed");
@@ -45,7 +43,7 @@ $(document).ready(function () {
         console.log(userGuess);
 
 
-        if (userGuessArray.includes(userGuess)) {
+        if (userGuessArray.includes(userGuess) || correctGuess.includes(userGuess)) {
 
             confirm("You have already guessed letter " + userGuess);
 
@@ -55,6 +53,9 @@ $(document).ready(function () {
                     console.log(userGuess + " is correct");
                     var correctLetter = userGuess;
                     console.log(correctLetter);
+                    correctGuess.push(userGuess);
+
+
                 } else {
                     $("#guesses").append(userGuess + "-");
                     console.log("You guessed the wrong letter");
