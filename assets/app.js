@@ -102,7 +102,7 @@ $(document).ready(function () {
                     userGuessArray.push(userGuess);
                     console.log(userGuessArray);
                     $("#losses").html("Losses: " + ++losses);
-                    $("#chances").html("Guesses: " + --htmlGuesses);
+                     --htmlGuesses;
                     
                         switch (htmlGuesses ){
                             case 9:
