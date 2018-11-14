@@ -4,60 +4,83 @@
     height: 20px;
     margin: 5px; 
     float: left;
+    
+}
+
+body {
+    background: green;
 }
 
 
-
-h1 {
+.title {
     font-family: 'Indie Flower', cursive;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    color: white; 
+    font-size:60px;
 }
 
 #space {
     height: 100px;
 }
 
+#side,
+#floor,
+#rope,
+#top,
+#body,
+#left-arm,
+#left-leg,
+#right-arm,
+#right-leg
+{
+    background-color: white;
+    display: none; 
+}
+
+
+#man {
+    float: center;
+}
+
 
 #side {
     height: 400px;
     width: 10px;
-    background-color: black;
     margin-left: 50px;
     margin-top: -60px;
-    display: none;
+  
    
 }
 
 #floor {
-    background-color: black; 
+
     height: 10px;
     width: 200px;
     margin-bottom: 30px;
-    display: none;
+  
 }
 
 #rope {
-    background-color: black; 
+
     height: 60px;
     width: 10px;
     margin-left: 240px;
-    display: none;
+  
   
 
 }
 
 #top {
-    background-color: black; 
+  
     height: 10px;
     width: 200px;
     margin-left: 50px;
-    display: none;
+  
 }
 
 
 #head {
-    background-color: rebeccapurple;
+  
     height: 100px;
     width: 100px;
     border-radius: 50px; 
@@ -65,29 +88,32 @@ h1 {
     margin-top: 60px;
     overflow: auto;
     position: absolute;
-    display: none;
+    display: none; 
+    border: 10px solid white; 
+    
 }
 
 
 
 #body {
-    background-color: rebeccapurple;
+  
     height: 150px;
     width: 10px;
     border-radius: 50px; 
     margin-left: 240px;
     margin-top: 90px;
     float: left;
-    display: none;
+  
+    color: white;
 
    
   
 }
 
-#left-arm{
+#left-arm { 
     width: 10px;
     height: 80px;
-    background-color:  rebeccapurple;
+ 
     -webkit-transform:
         translateY(-15px)
         translateX(10px)
@@ -96,13 +122,13 @@ h1 {
     margin-top: 150px;
     position: absolute;
     border-radius: 50%;
-    display: none;
+  
 }
 
 #left-leg{
     width: 10px;
     height: 80px;
-    background-color:  rebeccapurple;
+   
     -webkit-transform:
         translateY(-25px)
         translateX(10px)
@@ -111,14 +137,14 @@ h1 {
     margin-top: 250px;
     position: absolute;
     border-radius: 30%;
-    display: none;
+  
 
 }
 
 #right-arm{
     width: 10px;
     height: 80px;
-    background-color:  rebeccapurple;
+  
     -webkit-transform:
         translateY(-15px)
         translateX(10px)
@@ -127,13 +153,12 @@ h1 {
     margin-top: 150px;
     position: absolute;
     border-radius: 50%;
-    display: none;
+  
 }
 
 #right-leg{
     width: 10px;
     height: 80px;
-    background-color:  rebeccapurple;
     -webkit-transform:
         translateY(-25px)
         translateX(10px)
@@ -142,7 +167,7 @@ h1 {
     margin-top: 250px;
     position: absolute;
     border-radius: 30%;
-    display: none;
+  
 
 }
 

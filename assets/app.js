@@ -88,6 +88,11 @@ $(document).ready(function () {
                     console.log(userGuess + " is correct");
                     correctGuessArray.push(userGuess);
                     $("." + userGuess).append(userGuess);
+                    if (correctGuessArray.length === lettersOfWordArray.length){
+                        console.log("youwin")
+                        displayModal();
+
+                    }
 
                     
     
@@ -98,7 +103,7 @@ $(document).ready(function () {
                     console.log(userGuessArray);
                     $("#losses").html("Losses: " + ++losses);
                     $("#chances").html("Guesses: " + --htmlGuesses);
-                    //build man here on each
+                    
                         switch (htmlGuesses ){
                             case 9:
                             $("#floor").show();
@@ -185,7 +190,7 @@ var modal = document.getElementById('myModal');
 // var btn = document.getElementById("myBtn");
 
 // // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+
 
 // When the user clicks on the button, open the modal 
 function displayModal() {
@@ -193,16 +198,10 @@ function displayModal() {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+
 
 
 }); //document.ready
