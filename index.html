@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
+     <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -14,17 +15,19 @@
 <body>
 
  <div class="container">
-    <div id = "hangman" >
-       
-         <h1>Welcome to a fun game of Hangman!</h1>
-          
-        </div>
-      </div>
 
 
-<div class = "container">
+        <div id = "hangman" class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Welcome to a fun game of Hangman!</h1>
+            
+                </div>
+              </div>
 
-</div>
+  
+
+
+
 
 <div id = "chances">
     Guesses: 10
@@ -41,22 +44,39 @@
 <div id = "word-guessed">  
 </div>
 
-</div>
+
 
 <div id="myModal" class="modal">
 
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p>Game Over! You Lose! The correct answer was...</p>
-      <button id="new-game" onclick="start()">New Game</button>
+      <p>Game Over! You Lose! </p>
+      <button id="new-game">New Game</button>
     </div>
   
   </div>
 
+<div id = "space"></div>
+
+
+<div id = "man">
+<div id = "top"></div>
+<div id = "head"></div>
+<div id = "rope"></div>
+<div id = "body"></div>
+<div id = "left-arm"></div>
+<div id = "left-leg"></div>
+<div id = "right-arm"></div>
+<div id = "right-leg"></div>
+<div id = "side"></div>
+<div id = "floor"></div>
+
+</div>
 
 
 
-    
+
+  </div>  
 </body>
 </html>

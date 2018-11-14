@@ -1,6 +1,6 @@
 $(document).ready(function () {
-$("#new-game").click()
-function start() {
+
+
   
 
 
@@ -41,7 +41,7 @@ function start() {
         "adobe",
         "photoshop",
         "finalcut",
-        
+
     ]
     var word = randomWords[Math.floor(Math.random() * randomWords.length)]; {
         console.log(word);
@@ -98,6 +98,60 @@ function start() {
                     console.log(userGuessArray);
                     $("#losses").html("Losses: " + ++losses);
                     $("#chances").html("Guesses: " + --htmlGuesses);
+                    //build man here on each
+                        switch (htmlGuesses ){
+                            case 9:
+                            $("#floor").show();
+
+                            break;
+                          
+                            case 8:
+                             $("#side").show();
+
+                             break;
+                            case 7:
+                             $("#top").show();
+
+                             break;
+
+                            case 6:
+                             $("#rope").show();
+
+                             break;
+
+                            case 5:
+                             $("#head").show();
+
+                             break;
+
+                            case 4:
+                             $("#body").show();
+
+                             break;
+
+                             case 3:
+                             $("#left-arm").show();
+
+                             break;
+
+                             case 2:
+                             $("#right-arm").show();
+
+                             break;
+
+                             case 1:
+                             $("#left-leg").show();
+
+                             break;
+
+                             case 0:
+                             $("#right-leg").show();
+
+                             break;
+
+                             default:
+                             console.log(htmlGuesses);
+                        }
 
                     if (userGuessArray.length >= 10) {
                         console.log("Game Over")
@@ -113,14 +167,15 @@ function start() {
                 confirm(userGuess + "is not a valid guess. Please enter a letter!")
             }
 
-
+$("#new-game").click(function () {
+    location.reload();
+});
 
 
         }//end of else for userGuessArray.includes(userGuess)
 
     } //document on key up
 
-}
 
 
     // Get the modal
@@ -149,8 +204,6 @@ window.onclick = function(event) {
     }
 }
 
-
-start(); 
 
 }); //document.ready
 
