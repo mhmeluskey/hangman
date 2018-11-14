@@ -13,43 +13,49 @@
 </head>
 <body>
 
+ <div class="container">
+    <div id = "hangman" >
+       
+         <h1>Welcome to a fun game of Hangman!</h1>
+          
+        </div>
+      </div>
 
- <div class = "container">
 
-<h1>Hangman Game!</h1>
+<div class = "container">
 
-<div id = "word">
+</div>
 
-        <button id = "display-word" type="button" class="btn btn-danger">Display word</button>
-  
+<div id = "chances">
+    Guesses: 10
+    <br>
 </div>
 
 
 <div id = "guesses">
-    Guesses: 
+    Letters Guessed: 
 </div>
+
+
 
 <div id = "word-guessed">  
 </div>
 
-
-<div id = "side">
-    
 </div>
 
+<div id="myModal" class="modal">
 
-<div id = "post">
-</div>
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Game Over! You Lose! The correct answer was...</p>
+      <button id="new-game" onclick="start()">New Game</button>
+    </div>
+  
+  </div>
 
-<div id = "floor">
-</div>
 
 
-
-
-
-
-</div>   
 
     
 </body>
