@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="assets/jquery.lettering.js"></script>
     <script src="assets/app.js"></script>
 </head>
 
@@ -26,21 +26,19 @@
             
         </ul>
 
-
-        <div class="title">Hangman! </div>
-
+        <div id = board>
 
 
-
+        <div id = "hangman" class="title">Hangman! </div>
 
 
 
 
 
-        <div id="chances">
 
-            <br>
-        </div>
+
+
+
 
 
         <div id="guesses">
@@ -48,6 +46,7 @@
         </div>
 
 
+      
 
         <div id="word-guessed">
         </div>
@@ -59,7 +58,7 @@
             <!-- Modal content -->
             <div class="modal-content">
 
-                <p>Game Over! </p>
+                <p>You Lost, game over! </p>
                 <button id="new-game">Play Again</button>
             </div>
 
@@ -69,6 +68,7 @@
 
 
         <div id="man">
+
             <div id="top"></div>
             <div id="head"></div>
             <div id="rope"></div>
@@ -79,12 +79,10 @@
             <div id="right-leg"></div>
             <div id="side"></div>
             <div id="floor"></div>
-
         </div>
-
-
-
     </div>
+</div>  
+
 
 </body>
 

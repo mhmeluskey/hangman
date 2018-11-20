@@ -1,10 +1,7 @@
 $(document).ready(function () {
+    $("#hangman").lettering();
 
-
-  
-
-
-    console.log("ready!");
+  console.log("ready!");
 
     possibleGuessArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     userGuessArray = [];
@@ -49,6 +46,8 @@ $(document).ready(function () {
     var amount = word.length;
     console.log(amount);
 
+    
+
     $("#display-word").on("click", function (event) {
         $("#word").html("New Word is: " + amount + " letters long.")
     })
@@ -88,12 +87,7 @@ $(document).ready(function () {
                     console.log(userGuess + " is correct");
                     correctGuessArray.push(userGuess);
                     $("." + userGuess).append(userGuess);
-                    if (correctGuessArray.length === lettersOfWordArray.length){
-                        console.log("youwin")
-                        displayModal();
-
-                    }
-
+                 
                     
     
                 } else {
@@ -101,7 +95,6 @@ $(document).ready(function () {
                     console.log("You guessed the wrong letter");
                     userGuessArray.push(userGuess);
                     console.log(userGuessArray);
-                    $("#losses").html("Losses: " + ++losses);
                      --htmlGuesses;
                     
                         switch (htmlGuesses ){
@@ -159,7 +152,7 @@ $(document).ready(function () {
                         }
 
                     if (userGuessArray.length >= 10) {
-                        console.log("Game Over")
+                        console.log("You Lose, Game Over")
                         displayModal();
                       
 
