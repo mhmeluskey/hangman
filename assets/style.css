@@ -1,3 +1,8 @@
+#word-guessed{
+    margin-top: 300px;
+    position: absolute;
+}
+
 #blank-box {
    
     width: 20px; 
@@ -11,6 +16,7 @@
     color: white;
     font-family: 'Indie Flower', cursive;
     margin-bottom: 50px;
+ 
     
 
 
@@ -24,23 +30,27 @@ body{
     -o-background-size     : cover;
     background-size        : cover;
     background-position: 20% 100%;
+    color: white;
 
 }
 
 
 .title {
     font-family: 'Indie Flower', cursive;
-    margin: auto;
     color: white; 
     font-size:60px;
     z-index: 1;
+    position: absolute;
+    width: 100%; 
+ 
+    margin-top: -10px;
+
+
  
 }
 
 
-#space {
-    height: 100px;
-}
+
 
 #side,
 #floor,
@@ -53,15 +63,22 @@ body{
 #right-leg
 {
     background-color: white;
-    display: none; 
+    display: none;  
+    float: right; 
+    position: absolute;
 
   
 }
 
 
 #man {
-    float: center;
-    margin-top: 50px;
+ 
+    margin-top: 100px;
+    position: relative;
+    height: 400px;
+    position: absolute;
+    margin-left: 400px;
+    
       
 }
 
@@ -69,8 +86,7 @@ body{
 #side {
     height: 300px;
     width: 10px;
-    margin-left: 50px;
-    margin-top: -60px;
+ 
 
 }
 
@@ -78,7 +94,10 @@ body{
 
     height: 10px;
     width: 200px;
-    margin-bottom: 30px;
+    margin-top: 300px;
+    margin-left: -40px;
+ 
+
 
 }
 
@@ -86,7 +105,8 @@ body{
 
     height: 40px;
     width: 10px;
-    margin-left: 240px;
+  margin-left: 200px;
+
 
 
 }
@@ -95,7 +115,7 @@ body{
   
     height: 10px;
     width: 200px;
-    margin-left: 50px;
+    position: absolute
 
   
 }
@@ -106,26 +126,27 @@ body{
     height: 50px;
     width: 50px;
     border-radius: 50px; 
-    margin-left: 220px;
-    margin-top: 40px;
-    overflow: auto;
-  
-    display: none; 
+    margin-top: -60px;
+    margin-left: -20px;
+   
+    
+  display: none; 
     border: 10px solid white; 
 
     
 }
 
-
+#stick-figure {
+    margin-left: 200px;
+  margin-top: 100px; 
+}
 
 #body {
   
     height: 100px;
     width: 10px;
     border-radius: 50px; 
-    margin-left: 240px;
-    margin-top: 50px;
-    float: left;
+    
     color: white;
 
    
@@ -138,9 +159,10 @@ body{
     -webkit-transform:
         translateY(-15px)
         translateX(10px)
-        rotate(45deg); 
-    margin-left: 200px;
-    margin-top: 50px;
+        rotate(45deg);
+        margin-left: -40px;
+
+
   
     border-radius: 50%;
   
@@ -153,8 +175,8 @@ body{
         translateY(-25px)
         translateX(10px)
         rotate(45deg); 
-    margin-left: 200px;
-    margin-top: 155px;
+        margin-left: -40px;
+   margin-top: 110px;
   
     border-radius: 30%;
   
@@ -169,8 +191,7 @@ body{
         translateY(-15px)
         translateX(10px)
         rotate(135deg); 
-    margin-left: 260px;
-    margin-top: 50px;
+        margin-left: 20px;
   
     border-radius: 50%;
   
@@ -183,9 +204,8 @@ body{
         translateY(-25px)
         translateX(10px)
         rotate(135deg); 
-    margin-left: 260px;
-    margin-top: 155px;
-  
+        margin-top: 110px;
+        margin-left: 20px;
     border-radius: 30%;
   
 
@@ -220,4 +240,10 @@ body{
 button {
     width: 25%;  
     background-color: green;
+ }
+
+
+ #guesses {
+     position: relative;
+     
  }

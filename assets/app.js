@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#hangman").lettering();
+    
 
   console.log("ready!");
 
